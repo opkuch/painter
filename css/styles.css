@@ -1,6 +1,40 @@
 @import 'helpers.css';
 @import 'mq.css';
 @import url('https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Jolly+Lodger&family=Lobster&family=Mr+Dafoe&family=Roboto:wght@300&family=Satisfy&family=VT323&family=Work+Sans&display=swap');
+
+@media (max-width: 714px) {
+    .tool-bar li > * {
+        font-size: 1rem;
+        padding: 2px;
+    }
+    .tool-bar ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 714px) {
+    .tool-bar {
+        position: fixed;
+        left: 22%;
+        top: 4%;
+        user-select: none;
+    }
+
+    .tool-bar li>* {
+        font-size: 1rem;
+        margin-inline-start: 10px;
+
+    }
+
+
+    .btn:hover {
+        outline: 3px solid darkcyan;
+    }
+
+
+}
+
 body {
     margin: 0 auto;
     height: 100vh;
@@ -14,16 +48,11 @@ a, a:focus, a:active {
     color: darkblue;
     transition: text-shadow 400ms;
 }
+
 a:hover {
     color: lightskyblue;
 }
 
-.tool-bar {
-    position: fixed;
-    left: 22%;
-    top: 4%;
-    user-select: none;
-}
 
 .canvas-container {
     margin: 0 auto;
@@ -38,20 +67,9 @@ canvas {
     display: block;
 }
 
-
-.tool-bar li > * {
-    font-size:1rem;
-    margin-inline-start: 10px;
-
-}
-
 .btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
     transition: outline 400ms;
-}
-
-.btn:hover {
-    outline: 3px solid darkcyan;
 }
