@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Painter</title>
+  </head>
+  <body onload="init()">
+    <section class="tool-bar flex">
+      <ul class="clean-list flex">
+        <li>
+          <label for="bgColor">Background Color</label>
+          <input
+            type="color"
+            id="bgColor"
+            value="#8b0000"
+            oninput="setBgColor(this.value)"
+          />
+        </li>
+        <li>
+          <label for="strokeColor">Stroke Color</label>
+          <input
+            type="color"
+            id="strokeColor"
+            oninput="setStrokeColor(this.value)"
+          />
+        </li>
+        <li>
+          <label for="select-shape">Shape</label>
+          <select
+            name="shape"
+            id="select-shape"
+            onchange="setShape(this.value)"
+          >
+            <option value="square">Square</option>
+            <option value="triangle">Triangle</option>
+            <option value="circle">Circle</option>
+          </select>
+        </li>
+        <li>
+          <a href="#" download="myPainting.jpeg" onclick="downloadImg(this)"
+            >Download</a
+          >
+        </li>
+        <li>
+          <button class="btn upload-btn">Upload</button>
+        </li>
+        <li>
+          <button class="btn share-btn">Share</button>
+        </li>
+        <li>
+          <button class="btn clear-btn" onclick="clearCanvas()">Clear</button>
+        </li>
+      </ul>
+    </section>
+    <div class="canvas-container">
+      <canvas
+        id="canvas"
+        onmousedown="onDown(event)"
+        onmousemove="onMove(event)"
+        onmouseup="onUp()"
+        ontouchstart="onDown(event)"
+        ontouchmove="onMove(event)"
+        ontouchend="onUp()"
+      ></canvas>
+    </div>
+    <aside class="canvas-options">
+      <ul class="clean-list flex column"></ul>
+    </aside>
+    <script src="js/main.js"></script>
+  </body>
+</html>

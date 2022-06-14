@@ -1,0 +1,57 @@
+@import 'helpers.css';
+@import 'mq.css';
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@300&family=Jolly+Lodger&family=Lobster&family=Mr+Dafoe&family=Roboto:wght@300&family=Satisfy&family=VT323&family=Work+Sans&display=swap');
+body {
+    margin: 0 auto;
+    height: 100vh;
+    font-family: 'Work Sans';
+    background-color: rgb(243, 237, 247);
+
+}
+
+a, a:focus, a:active {
+    text-decoration: none;
+    color: darkblue;
+    transition: text-shadow 400ms;
+}
+a:hover {
+    color: lightskyblue;
+}
+
+.tool-bar {
+    position: fixed;
+    left: 22%;
+    top: 4%;
+    user-select: none;
+}
+
+.canvas-container {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    outline: 1px solid rgba(255, 255, 255, 0.779);
+}
+
+canvas {
+    background-color: aliceblue;
+    margin: 0 auto;
+    display: block;
+}
+
+
+.tool-bar li > * {
+    font-size:1rem;
+    margin-inline-start: 10px;
+
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: outline 400ms;
+}
+
+.btn:hover {
+    outline: 3px solid darkcyan;
+}
